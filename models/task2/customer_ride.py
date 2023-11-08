@@ -1,3 +1,9 @@
+# Import necessary libraries
+from dbt_utils import dbt
+from dbt_utils.dbt import seed, run_sql, test
+
+# Define your SQL query
+sql_query = """
 -- Calculate ride aggregations for each customer
 WITH customer_ride_data AS (
     SELECT
@@ -12,3 +18,10 @@ WITH customer_ride_data AS (
 )
 
 SELECT * FROM customer_ride_data;
+"""
+
+# Run the SQL query
+result = run_sql(sql_query)
+
+# Print the result (optional)
+print(result)

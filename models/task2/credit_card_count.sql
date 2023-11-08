@@ -3,6 +3,6 @@
 {{ config(materialized='table') }}
 
 select payment, count(*) as count
-from {{ ref('taxi_trips') }}
+from {{ ref('data_meth.dbt_osobakin.raw_taxi_trips') }}
 where payment = 'credit card'
 group by payment

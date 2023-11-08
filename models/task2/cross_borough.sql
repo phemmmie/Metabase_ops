@@ -3,5 +3,5 @@
 {{ config(materialized='table') }}
 
 select *
-from {{ ref('taxi_trips') }}
+from {{ ref('data_meth.dbt_osobakin.raw_taxi_trips') }}
 where pickup_borough != dropoff_borough

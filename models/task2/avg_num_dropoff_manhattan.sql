@@ -3,5 +3,5 @@
 {{ config(materialized='table') }}
 
 select avg(passengers) as avg
-from {{ ref('taxi_trips') }}
+from {{ ref('data_meth.dbt_osobakin.raw_taxi_trips') }}
 where dropoff_borough = 'Manhattan'

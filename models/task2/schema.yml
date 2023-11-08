@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: taxi_trips
+  - name: raw_taxi_trips
     description: "Information about taxi trips"
     columns:
       - name: pickup

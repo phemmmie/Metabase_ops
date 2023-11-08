@@ -8,7 +8,7 @@ WITH customer_ride_data AS (
         AVG(tip) AS avg_tip_given
     FROM
         data_meth.dbt_osobakin.raw_taxi_trips  -- Replace with your actual dataset and table names.
-    GROUP BY customer_id
+    GROUP BY fare
 )
 
 SELECT * FROM customer_ride_data;
